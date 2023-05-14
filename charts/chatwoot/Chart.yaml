@@ -22,10 +22,10 @@ keywords:
 maintainers:
   - name: hamza nael
     email: hamza@ctech.company
-home: https://github.com/Hamzanael/charts
+home: https://github.com/Hamzanael/charts-telelogx
 icon: https://chatwoot-public-assets.s3.amazonaws.com/logo/square.png
 sources:
-  - https://github.com/Hamzanael/chatwoot
+  - https://github.com/Hamzanael/chatwoot-telelogx
   - http://www.chatwoot.com
 
 # This is the chart version.
