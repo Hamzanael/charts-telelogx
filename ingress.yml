@@ -1,26 +1,26 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress-chatsync
+  name: ingress-mokhatbat
   annotations:
     cert-manager.io/issuer: letsencrypt-nginx
     nginx.org/proxy-pass-headers: "api_access_token"
   labels:
-    app: ingress-chatsync
+    app: ingress-mokhatbat
 spec:
   tls:
     - hosts:
-        - chat.ctech.company
+        - chat2.ctech.company
       secretName: letsencrypt-nginx
   rules:
-    - host: chat.ctech.company
+    - host: chat2.ctech.company
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: chatsync-chatwoot
+                name: mokhatbat-chatwoot
                 port:
                   number: 3000
   ingressClassName: nginx
