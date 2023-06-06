@@ -11,20 +11,9 @@ spec:
   tls:
     - hosts:
         - chat.mokhatbat.com
-        - chat2.ctech.company
       secretName: letsencrypt-nginx
   rules:
     - host: chat.mokhatbat.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: mokhatbat-chatwoot
-                port:
-                  number: 3000
-    - host: chat2.ctech.company
       http:
         paths:
           - path: /
