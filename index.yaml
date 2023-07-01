@@ -2,6 +2,42 @@ apiVersion: v1
 entries:
   chatwoot:
   - apiVersion: v2
+    appVersion: v1.0.18-ce-telelogx
+    created: "2023-07-01T09:40:41.198006566Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.6.7
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.11.3
+    description: "Open-source customer engagement suite, an alternative to Intercom,
+      Zendesk, Salesforce Service Cloud etc. \U0001F525\U0001F4AC"
+    digest: 2a29fd16b59af7f5f03defdbf86dfd191d5d2faf0dd3d47d90e1eca54dec4b83
+    home: https://github.com/Hamzanael/charts-telelogx
+    icon: https://chatwoot-public-assets.s3.amazonaws.com/logo/square.png
+    keywords:
+    - chatwoot
+    - open source
+    - customer support
+    - chat
+    - ruby
+    - rails
+    - crm
+    maintainers:
+    - email: hamza@ctech.company
+      name: hamza nael
+    name: chatwoot
+    sources:
+    - https://github.com/Hamzanael/chatwoot-telelogx
+    - http://www.chatwoot.com
+    type: application
+    urls:
+    - https://github.com/Hamzanael/charts-telelogx/releases/download/chatwoot-1.0.64/chatwoot-1.0.64.tgz
+    version: 1.0.64
+  - apiVersion: v2
     appVersion: v1.0.17-ce-telelogx
     created: "2023-06-20T09:22:08.65120064Z"
     dependencies:
@@ -541,4 +577,4 @@ entries:
     urls:
     - https://github.com/Hamzanael/charts-telelogx/releases/download/chatwoot-1.0.49/chatwoot-1.0.49.tgz
     version: 1.0.49
-generated: "2023-06-20T09:22:08.65129624Z"
+generated: "2023-07-01T09:40:41.19828648Z"
