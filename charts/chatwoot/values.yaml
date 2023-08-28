@@ -11,11 +11,11 @@ web:
   hpa:
     # set this to true to enable horizontal pod autoscaling
     # uncomment values.resources section if hpa is enabled
-    enabled: false
+    enabled: true
     cputhreshold: 75
-    minpods: 4
+    minpods: 1
     maxpods: 10
-  replicaCount: 4
+  replicaCount: 1
   resources: { }
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
@@ -31,11 +31,11 @@ worker:
   hpa:
     # set this to true to enable horizontal pod autoscaling
     # uncomment values.resources section if hpa is enabled
-    enabled: false
+    enabled: true
     cputhreshold: 75
-    minpods: 8
+    minpods: 2
     maxpods: 10
-  replicaCount: 8
+  replicaCount: 2
   resources: { }
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
