@@ -23,10 +23,10 @@ web:
     # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
       cpu: 500m
-      memory: 2Gi
+      memory: 512Mi
     requests:
     cpu: 250m
-    memory: 1Gi
+    memory: 256Mi
 worker:
   hpa:
     # set this to true to enable horizontal pod autoscaling
@@ -43,10 +43,10 @@ worker:
     # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
       cpu: 500m
-      memory: 2Gi
+      memory: 512Mi
     requests:
       cpu: 250m
-      memory: 1Gi
+      memory: 256Mi
 
 services:
   name: chatwoot
