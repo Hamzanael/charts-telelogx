@@ -13,9 +13,9 @@ web:
     # uncomment values.resources section if hpa is enabled
     enabled: false
     cputhreshold: 75
-    minpods: 4
+    minpods: 1
     maxpods: 10
-  replicaCount: 4
+  replicaCount: 1
   resources:
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
@@ -23,19 +23,19 @@ web:
     # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
       cpu: 500m
-      memory: 512Mi
+      memory: 2Gi
     requests:
     cpu: 250m
-    memory: 256Mi
+    memory: 1Gi
 worker:
   hpa:
     # set this to true to enable horizontal pod autoscaling
     # uncomment values.resources section if hpa is enabled
     enabled: false
     cputhreshold: 75
-    minpods: 8
+    minpods: 2
     maxpods: 10
-  replicaCount: 8
+  replicaCount: 2
   resources:
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
@@ -43,10 +43,10 @@ worker:
     # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
     limits:
       cpu: 500m
-      memory: 512Mi
+      memory: 2Gi
     requests:
       cpu: 250m
-      memory: 256Mi
+      memory: 1Gi
 
 services:
   name: chatwoot
