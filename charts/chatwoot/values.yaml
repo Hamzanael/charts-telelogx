@@ -16,17 +16,17 @@ web:
     minpods: 4
     maxpods: 10
   replicaCount: 4
-  resources: { }
+  resources:
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
     # resources, such as Minikube. If you do want to specify resources, uncomment the following
     # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-    # limits:
-    #   cpu: 500m
-    #   memory: 512Mi
-    # requests:
-  #   cpu: 250m
-  #   memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+    cpu: 250m
+    memory: 256Mi
 worker:
   hpa:
     # set this to true to enable horizontal pod autoscaling
@@ -36,17 +36,17 @@ worker:
     minpods: 8
     maxpods: 10
   replicaCount: 8
-  resources: { }
+  resources:
     # We usually recommend not to specify default resources and to leave this as a conscious
     # choice for the user. This also increases chances charts run on environments with little
     # resources, such as Minikube. If you do want to specify resources, uncomment the following
     # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-    # limits:
-    #   cpu: 500m
-    #   memory: 512Mi
-    # requests:
-  #   cpu: 250m
-  #   memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 250m
+      memory: 256Mi
 
 services:
   name: chatwoot
@@ -55,7 +55,7 @@ services:
   type: ClusterIP
   annotations: { }
     # For example
-    #  service.beta.kubernetes.io/aws-load-balancer-type: external
+  #  service.beta.kubernetes.io/aws-load-balancer-type: external
   #  service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: ip
   #  service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 
@@ -81,7 +81,7 @@ securityContext: { }
   # capabilities:
   #   drop:
   #   - ALL
-  # readOnlyRootFilesystem: true
+# readOnlyRootFilesystem: true
 # runAsNonRoot: true
 # runAsUser: 1000
 
